@@ -1,0 +1,132 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Materiais
+# @name Materiais_GET
+GET {{server}}/odata/v4/dados-mestres/Materiais
+Authorization: Basic {{username}}:{{password}}
+
+
+### Materiais
+# @name Materiais_POST
+POST {{server}}/odata/v4/dados-mestres/Materiais
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "codigo": "MAT01",
+  "descricao": "TESTE",
+  "precoBase": 50,
+  "unidade": "CX"
+}
+
+
+### Materiais
+# @name Materiais_PATCH
+PATCH {{server}}/odata/v4/dados-mestres/Materiais/26167316-1372-4343-a38c-80a9ce8c9ce0
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "codigo": "MAT01",
+  "descricao": "TESTE",
+  "precoBase": 50,
+  "unidade": "CX"
+}
+
+
+### Materiais
+# @name Materiais_DELETE
+DELETE {{server}}/odata/v4/dados-mestres/Materiais/26167316-1372-4343-a38c-80a9ce8c9ce0
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Funcionario
+# @name Funcionario_GET
+GET {{server}}/odata/v4/dados-mestres/Funcionario
+Authorization: Basic {{username}}:{{password}}
+
+
+### Funcionario
+# @name Funcionario_POST
+POST {{server}}/odata/v4/dados-mestres/Funcionario
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "matricula": "F0001",
+  "nome": "Fulano de Tal",
+  "email": "fulano@email.com"
+}
+
+
+### Funcionario
+# @name Funcionario_PATCH
+PATCH {{server}}/odata/v4/dados-mestres/Funcionario/15115988-3e47-4653-8199-f61f95fa9fd0
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "15115988-3e47-4653-8199-f61f95fa9fd0",
+  "matricula": "matricula-15115988",
+  "nome": "nome-15115988",
+  "email": "email-15115988",
+  "ativo": true,
+  "createdAt": "2004-05-10T00:00:00.000Z",
+  "createdBy": "createdBy.8zzkk@example.net",
+  "modifiedAt": "2005-06-12T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.8zzkk@example.com"
+}
+
+
+### Funcionario
+# @name Funcionario_DELETE
+DELETE {{server}}/odata/v4/dados-mestres/Funcionario/15115988-3e47-4653-8199-f61f95fa9fd0
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Locais
+# @name Locais_GET
+GET {{server}}/odata/v4/dados-mestres/Locais
+Authorization: Basic {{username}}:{{password}}
+
+
+### Locais
+# @name Locais_POST
+POST {{server}}/odata/v4/dados-mestres/Locais
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "codigo": "LOC01",
+  "descricao": "Recife"
+}
+
+
+### Locais
+# @name Locais_PATCH
+PATCH {{server}}/odata/v4/dados-mestres/Locais/12143571-2ec9-4f21-baa7-5345f7e294f0
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "12143571-2ec9-4f21-baa7-5345f7e294f0",
+  "codigo": "o-12143571",
+  "descricao": "descricao-12143571",
+  "ativo": false,
+  "createdAt": "2015-10-14T00:00:00.000Z",
+  "createdBy": "createdBy.78a1f@example.org",
+  "modifiedAt": "2006-12-24T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.78a1f@example.net"
+}
+
+
+### Locais
+# @name Locais_DELETE
+DELETE {{server}}/odata/v4/dados-mestres/Locais/12143571-2ec9-4f21-baa7-5345f7e294f0
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}

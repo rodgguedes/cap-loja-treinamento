@@ -1,0 +1,110 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### PedidoHeader
+# @name PedidoHeader_GET
+GET {{server}}/odata/v4/dados-transacionais/PedidoHeader
+Authorization: Basic {{username}}:{{password}}
+
+
+### PedidoHeader
+# @name PedidoHeader_POST
+POST {{server}}/odata/v4/dados-transacionais/PedidoHeader
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "numero": "PED001",
+  "dataPedido": "2024-05-14",
+  "funcionario_ID": "790c0b87-6f0a-455e-98a1-59cbebf3b91a",
+  "totalBruto": 500.00,
+  "itens": [
+    {
+      "item": 1,
+      "material_ID": "3511e24a-5fbe-4796-a641-5668ed87a622",
+      "local_ID": "431cc1a4-c58b-4a10-bd00-f9205643d73f",
+      "quantidade": 2.000,
+      "precoUnit": 150.00,
+      "valorItem": 300.00,
+      "percDescon": 0.00
+    },
+    {
+      "item": 2,
+      "material_ID": "409e0c48-1d3a-43a3-81c3-b40508ea6e7a",
+      "local_ID": "431cc1a4-c58b-4a10-bd00-f9205643d73f",
+      "quantidade": 1.000,
+      "precoUnit": 200.00,
+      "valorItem": 200.00,
+      "percDescon": 0.00
+    }
+  ]
+}
+
+### PedidoHeader
+# @name PedidoHeader_PATCH
+PATCH {{server}}/odata/v4/dados-transacionais/PedidoHeader/3125824e-a7d5-4aa4-aa5e-44c8a0b17e16
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "3125824e-a7d5-4aa4-aa5e-44c8a0b17e16",
+  "numero": "numero-3125824",
+  "dataPedido": "2012-07-05",
+  "status": "APROVADO",
+  "itens": [
+    {
+      "item": 16459162,
+      "quantidade": 993111249106.919,
+      "precoUnit": 8051044997710.81,
+      "valorItem": 672091127108.31,
+      "percDescon": 7.85,
+      "createdAt": "2012-07-21T00:00:00.000Z",
+      "createdBy": "createdBy.9sryy@example.org",
+      "modifiedAt": "2008-05-16T00:00:00.000Z",
+      "modifiedBy": "modifiedBy.9sryy@example.org"
+    },
+    {
+      "item": 16459163,
+      "quantidade": 429852214776.246,
+      "precoUnit": 3049267531674.91,
+      "valorItem": 7778842816739.7,
+      "percDescon": 7.39,
+      "createdAt": "2016-04-05T00:00:00.000Z",
+      "createdBy": "createdBy.9sryz@example.com",
+      "modifiedAt": "2001-04-14T00:00:00.000Z",
+      "modifiedBy": "modifiedBy.9sryz@example.net"
+    }
+  ],
+  "totalBruto": 8509950977436.17,
+  "createdAt": "2001-11-14T00:00:00.000Z",
+  "createdBy": "createdBy.1uzwg@example.org",
+  "modifiedAt": "2014-01-13T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.1uzwg@example.net"
+}
+
+
+### PedidoHeader
+# @name PedidoHeader_DELETE
+DELETE {{server}}/odata/v4/dados-transacionais/PedidoHeader/3125824e-a7d5-4aa4-aa5e-44c8a0b17e16
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### PedidoItem
+# @name PedidoItem_GET
+GET {{server}}/odata/v4/dados-transacionais/PedidoItem
+Authorization: Basic {{username}}:{{password}}
+
+
+### confirmarPedido
+# @name confirmarPedido_POST
+POST {{server}}/odata/v4/dados-transacionais/confirmarPedido
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+    "pedidoId": "2030cf28-9755-4eae-bd86-23a6d3a989a1",
+    "funcionarioId": "7c2f273c-7913-4ed9-a663-886656d4eab2"
+}

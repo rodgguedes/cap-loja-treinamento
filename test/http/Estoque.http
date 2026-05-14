@@ -1,0 +1,89 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Estoque
+# @name Estoque_GET
+GET {{server}}/odata/v4/estoque/Estoque
+Authorization: Basic {{username}}:{{password}}
+
+
+### Estoque
+# @name Estoque_POST
+POST {{server}}/odata/v4/estoque/Estoque
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "saldo": 641745615153.642,
+  "createdAt": "2017-12-13T00:00:00.000Z",
+  "createdBy": "createdBy.4e6si@example.net",
+  "modifiedAt": "2012-10-03T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.4e6si@example.org"
+}
+
+
+### Estoque
+# @name Estoque_PATCH
+PATCH {{server}}/odata/v4/estoque/Estoque(material=undefined,local=undefined)
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "saldo": 641745615153.642,
+  "createdAt": "2017-12-13T00:00:00.000Z",
+  "createdBy": "createdBy.4e6si@example.net",
+  "modifiedAt": "2012-10-03T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.4e6si@example.org"
+}
+
+
+### Estoque
+# @name Estoque_DELETE
+DELETE {{server}}/odata/v4/estoque/Estoque(material=undefined,local=undefined)
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Reservas
+# @name Reservas_GET
+GET {{server}}/odata/v4/estoque/Reservas
+Authorization: Basic {{username}}:{{password}}
+
+
+### Reservas
+# @name Reservas_POST
+POST {{server}}/odata/v4/estoque/Reservas
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "local": "vas-826814",
+  "material": "Reservas-826814",
+  "descricaoMaterial": "descricaoMaterial-826814",
+  "quantidade": 53911665225.669,
+  "unidadeMedida": "ML"
+}
+
+
+### Reservas
+# @name Reservas_PATCH
+PATCH {{server}}/odata/v4/estoque/Reservas(local='vas-826814',material='Reservas-826814')
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "local": "vas-826814",
+  "material": "Reservas-826814",
+  "descricaoMaterial": "descricaoMaterial-826814",
+  "quantidade": 53911665225.669,
+  "unidadeMedida": "ML"
+}
+
+
+### Reservas
+# @name Reservas_DELETE
+DELETE {{server}}/odata/v4/estoque/Reservas(local='vas-826814',material='Reservas-826814')
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
