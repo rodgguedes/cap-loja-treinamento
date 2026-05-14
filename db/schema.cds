@@ -102,3 +102,13 @@ context estoque {
             mat.descricao,
             mat.unidade;
 }
+
+context utilitarios {
+    
+    entity Log : cuid, managed {
+        entidade: String;
+        campo: String;
+        valorAntigo: String;
+        valorNovo: String;
+    }
+}

@@ -25,6 +25,7 @@ module.exports = class DadosTransacionais extends cds.ApplicationService { init(
 
       const { PedidoHeader: Pedidos, PedidoItem: ItensPedido } = cds.entities('my.loja.dados_transacionais')
       const { Estoque: Estoques, Reservas }                    = cds.entities('my.loja.estoque')
+      const { Log }                                            = cds.entities('my.loja.utilitarios')
 
       // 1. Valida existência e status do pedido
       const oPedido = await SELECT.one.from(Pedidos).where({ ID: pedidoId })
@@ -79,12 +80,12 @@ module.exports = class DadosTransacionais extends cds.ApplicationService { init(
         .where({ ID: pedidoId })
 
       // 5. Grava log
-      /*await INSERT.into(Log).entries({
+      await INSERT.into(Log).entries({
         entidade    : `PedidoHeader:${pedidoId}`,
         campo       : 'status',
         valorAntigo : 'ABERTO',
         valorNovo   : 'APROVADO'
-      })*/
+      })
 
       return {
         sucesso      : true,

@@ -25,13 +25,13 @@ Authorization: Basic {{username}}:{{password}}
 
 ### Materiais
 # @name Materiais_PATCH
-PATCH {{server}}/odata/v4/dados-mestres/Materiais/26167316-1372-4343-a38c-80a9ce8c9ce0
+PATCH {{server}}/odata/v4/dados-mestres/Materiais/769df079-18db-4288-a0f0-1acd62307196
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
   "codigo": "MAT01",
-  "descricao": "TESTE",
+  "descricao": "TESTE_4",
   "precoBase": 50,
   "unidade": "CX"
 }
